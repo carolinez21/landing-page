@@ -12,8 +12,9 @@ h1 {
 }
 
 img {
-    width: 600px;
+    width: auto;
     height: auto;
+    max-width: 40vw;
 }
 
 .left { 
@@ -65,4 +66,5 @@ button {
     padding-top: 200px;
     padding-bottom: 200px;
     gap: 50px;
+    align-items: center;
 }
