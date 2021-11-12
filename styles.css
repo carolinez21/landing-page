@@ -1,6 +1,8 @@
 body {
     margin: 0;
+    font-family: sans-serif;
 }
+
 .section-1 {
     background-color: #1F2937;
 }
@@ -11,10 +13,9 @@ h1 {
     color: #F9FAF8;
 }
 
-img {
-    width: auto;
+.photo img {
+    width: 40vw;
     height: auto;
-    max-width: 40vw;
 }
 
 .left { 
@@ -67,4 +68,33 @@ button {
     padding-bottom: 200px;
     gap: 50px;
     align-items: center;
+}
+
+.section-2 {
+    text-align: center;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: extra-bold;
+    color: #1F2937;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding-bottom: 200px;
+}
+
+.container img {
+    object-fit: cover;
+    width: 15vw;
+    height: 15vw;
+    border-radius: 10px;
+}
+
+.image-1, .image-2, .image-3, .image-4 {
+    max-width: 15vw;
 }
