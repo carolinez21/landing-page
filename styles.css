@@ -1,34 +1,45 @@
 body {
     margin: 0;
-    font-family: sans-serif;
+    font-family: Georgia;
 }
 
 /*section 1*/
 
 .section-1 {
     background-color: #1F2937;
+    padding: 0 50px;
 }
 
 h1 {
-    font-size: 48px;
+    font-size: 60px;
     font-weight: extra-bold;
     color: #F9FAF8;
+    margin: 0px;
 }
 
 .photo img {
     width: 40vw;
+    border-radius: 10px;
     height: auto;
 }
 
-.left { 
-    font-size: 24px;
-    color: #F9FAF8;
-    font-weight: bold;
+.left img{ 
+    object-fit: cover;
+    width: 70px;
+    height: 70px;
+    border-radius: 100px;
 }
 
-p, a {
-    font-size: 18px;
+p, a { 
     color: #E5E7EB;
+}
+
+a {
+    font-size: 18px;
+}
+p {
+    font-size: 1.7vw;
+    margin: 1vh 0px;
 }
 
 a {
@@ -51,12 +62,13 @@ button {
     font-size: 18px;
     font-weight: bold;
     border-color: #3882F6;
+    margin-top: 2vh;
 }
 
-.header, .introduction {
+/*.header, .introduction {
     padding-left: 200px;
     padding-right: 200px;
-}
+}*/
 
 .header {
     display: flex;
@@ -70,6 +82,7 @@ button {
     padding-bottom: 200px;
     gap: 50px;
     align-items: center;
+    justify-content: center;
 }
 
 /*section 2*/
@@ -86,22 +99,114 @@ h2 {
 
 .container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 60px;
-    padding-bottom: 200px;
+    padding-bottom: 150px;
 }
 
-.container img {
+/*.container img {
     object-fit: cover;
-    width: 10vw;
-    height: 10vw;
+    width: 15vw;
+    height: 15vw;
     border-radius: 10px;
-    margin-bottom: 8px;
+}*/
+
+.image-1, .image-2, .image-3, .image-4, .image-5, .image-6, .image-7, .image-8, .image-9 {
+    max-width: 15vw;
 }
 
-.image-1, .image-2, .image-3, .image-4 {
-    max-width: 10vw;
+.slideshow{
+    width: 0vw;
+    height: 15vw;
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.slideshow img{
+    object-fit: cover;
+    width: 15vw;
+    height: 15vw;
+    border-radius: 10px;
+    position: absolute;
+}
+
+.image-1 .slideshow img,
+.image-6 .slideshow img,
+.image-9 .slideshow img{
+    animation: showMe 8s linear infinite 0s forwards;
+    animation-play-state: paused;
+}
+
+.image-2 .slideshow img,
+.image-3 .slideshow img,
+.image-4 .slideshow img,
+.image-5 .slideshow img,
+.image-7 .slideshow img,
+.image-8 .slideshow img{
+    animation: showMe 4s linear infinite 0s forwards;
+    animation-play-state: paused;
+}
+
+.slideshow:hover img{
+    animation-play-state: running;
+}
+
+/*slideshow 1*/
+.image-1 .slideshow img:nth-child(1),
+.image-6 .slideshow img:nth-child(1),
+.image-9 .slideshow img:nth-child(1){
+    z-index: 5;
+}
+
+.image-1 .slideshow img:nth-child(2),
+.image-6 .slideshow img:nth-child(2),
+.image-9 .slideshow img:nth-child(2){
+    animation-delay: 2s;
+    z-index: 4;
+}
+
+.image-1 .slideshow img:nth-child(3),
+.image-6 .slideshow img:nth-child(3),
+.image-9 .slideshow img:nth-child(3){
+    animation-delay: 4s;
+    z-index: 3;
+}
+
+.image-1 .slideshow img:nth-child(4),
+.image-6 .slideshow img:nth-child(4),
+.image-9 .slideshow img:nth-child(4){
+    animation-delay: 6s;
+    z-index: 2;
+}
+
+/*slideshow 2*/
+.image-2 .slideshow img:nth-child(1),
+.image-3 .slideshow img:nth-child(1),
+.image-4 .slideshow img:nth-child(1),
+.image-5 .slideshow img:nth-child(1),
+.image-7 .slideshow img:nth-child(1),
+.image-8 .slideshow img:nth-child(1){
+    z-index: 3;
+}
+
+.image-2 .slideshow img:nth-child(2),
+.image-3 .slideshow img:nth-child(2),
+.image-4 .slideshow img:nth-child(2),
+.image-5 .slideshow img:nth-child(2),
+.image-7 .slideshow img:nth-child(2),
+.image-8 .slideshow img:nth-child(2){
+    animation-delay: 2s;
+    z-index: 2;
+}
+
+@keyframes showMe {
+    0% {visibility: visible; z-index: 100;}
+    25% {visibility: visible; z-index: 100; opacity: .6;}
+    50% { visibility: hidden; z-index: 0; opacity: .4;}
+    75% {opacity: .2;}
+    100% {visibility: hidden; z-index: 0; opacity: 0;}
 }
 
 .subtext {
@@ -112,7 +217,7 @@ h2 {
 
 .section-3 {
     background-color: #E5E7EB;
-    padding: 200px 450px;
+    padding: 200px 15vw;
 }
 
 .quote {
@@ -137,7 +242,7 @@ h2 {
     align-items: center;
     margin: 100px 200px;
     background-color: #3882F6;
-    padding: 60px 250px;
+    padding: 60px 10vw;
     border-radius: 10px;
 }
 
